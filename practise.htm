@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h3>i am clicked</h3>
+        <input type="number">
+        <label>amount</label>
+        
+        <input type="number" >
+        <label>percamount</label>
+        
+        <input type="number" disabled>
+        <label>amountwith perc</label>
+        <input type="number" disabled>
+        <label>totalamount</label>
+        
+        <button>clickme</button>
+<script>
+let in0=document.getElementsByTagName("input")[0].value;
+let in1=document.getElementsByTagName("input")[1].value;
+let in2 = document.getElementsByTagName("input")[2].value;
+let in3= document.getElementsByTagName("input")[3].value;
+let numin0 = Number(in0);
+let numin1 =  Number(in1);
+let numin2 = Number(in2);
+let numin3 = Number(in3);
+let amountperc = (numin0) * (numin1 / 100);
+let totalamount = (numin1 + amountperc) ;
+let button = document.getElementsByTagName("button")[0].addEventListener("click", ()=> {
+    console.log(document.getElementsByTagName("input")[2].value=amountperc);
+    console.log(document.getElementsByTagName("input")[3].value=totalamount);
+})
+
+
+</script>
+    </body>
+</html>
